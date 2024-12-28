@@ -1,0 +1,36 @@
+ARCHCFLAGS       = -Wstrict-prototypes
+ARCHCPUFLAGS     = -mlittle-endian -march=armv7e-m -mtune=cortex-m4 -mfloat-abi=soft
+ARCHCXXFLAGS     = -nostdinc++ -std=gnu++17 -fno-exceptions -fcheck-new -fno-rtti
+ARCHPICFLAGS     = -fpic -msingle-pic-base -mpic-register=r10
+ARCHWARNINGS     = 
+ARCHWARNINGSXX   = 
+ARCHOPTIMIZATION = -fomit-frame-pointer -mthumb -Wa,-mthumb -Wa,-mimplicit-it=always -fno-common -Wall -Wshadow -Wundef -ffunction-sections -fdata-sections -g
+CROSSDEV         = arm-none-eabi-
+CC               = arm-none-eabi-gcc
+CXX              = arm-none-eabi-g++
+CPP              = arm-none-eabi-gcc -E -P -x c
+LD               = arm-none-eabi-ld
+AR               = arm-none-eabi-ar rcs
+NM               = arm-none-eabi-nm
+STRIP            = arm-none-eabi-strip --strip-unneeded
+OBJCOPY          = arm-none-eabi-objcopy
+OBJDUMP          = arm-none-eabi-objdump
+NXFLATLDFLAGS1   = -r -d -warn-common
+NXFLATLDFLAGS2   = -r -d -warn-common -T/home/zeki/workspace/NuttX/nuttxspace/nuttx/binfmt/libnxflat/gnu-nxflat-pcrel.ld -no-check-sections
+OBJEXT           = .o
+LIBEXT           = .a
+EXEEXT           = 
+HOSTCC           = cc
+HOSTINCLUDES     = 
+HOSTCFLAGS       = -O2 -Wall -Wstrict-prototypes -Wshadow -DHAVE_STRTOK_C=1
+HOSTLDFLAGS      = 
+HOSTEXEEXT       = 
+LDNAME           = ld.script
+LDELFFLAGS       = 
+EXTRA_LIBS       = /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/libm.a
+EXTRA_OBJS       = 
+HEAD_OBJ         = 
+LDENDGROUP       = 
+LDFLAGS          = -nostdlib --gc-sections --cref -Map=/home/zeki/workspace/NuttX/nuttxspace/nuttx/nuttx.map
+LDSTARTGROUP     = 
+LDLIBS           = -lsched -ldrivers -lboards -lc -lmm -larch -lxx -lapps -lfs -lbinfmt -lgraphics -lnx -lboard 
