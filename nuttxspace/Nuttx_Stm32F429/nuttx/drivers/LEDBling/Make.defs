@@ -1,5 +1,0 @@
-# LEDBling
- 
-ifeq($(CONFIG_LEDBLING) ,y)
-        CSRCS += LEDBling.c
-#endif
